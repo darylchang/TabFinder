@@ -8,3 +8,10 @@ function runScript(e) {
         return false;
 	}
 }
+
+chrome.tabs.getAllInWindow(null, function(tabs) {
+
+	var numTabs = tabs.length;
+	document.getElementById("add").innerHTML = numTabs + " , bitch";
+
+});
