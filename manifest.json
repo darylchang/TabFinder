@@ -11,5 +11,13 @@
   },
   "permissions": [
     "tabs", "http://*/*"
-  ]
+  ],
+   "content_scripts": 
+ [
+  {
+   "matches":   ["http://*/*", "https://*/*"],
+   "js":    ["content.js"],   
+   "all_frames":  true
+  }
+ ]
 }

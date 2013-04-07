@@ -9,9 +9,16 @@ function runScript(e) {
 	}
 }
 
+chrome.tabs.getSelected(null, function(tab) {
+    chrome.tabs.sendMessage(tab.id, {method: "getText"}, function(response) {
+        if(response.method=="getText"){
+            alltext = response.data;
+            console.log(alltext);
+        }
+    });
+});
+
 chrome.tabs.getAllInWindow(null, function(tabs) {
-
 	var numTabs = tabs.length;
-	document.getElementById("add").innerHTML = numTabs + " , bitch";
-
+	document.getElementById("add").innerHTML = numTabs;
 });
