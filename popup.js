@@ -1,4 +1,4 @@
-document.getElementById("query").onkeypress = "return runScript(event);"
+document.getElementById("query").onkeypress = runScript;
 
 function runScript(e) {
 		 if (e.keyCode == 13) {

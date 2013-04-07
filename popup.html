@@ -7,4 +7,8 @@
   	<input id="query" type="text" name="search">
   </body>
   <script src="popup.js"></script> 
+  <script>chrome.browserAction.onClicked.addListener(function(tab) {
+  chrome.tabs.executeScript(null,
+                           {code:"document.body.bgColor='red'"});
+});</script>
 </html>
